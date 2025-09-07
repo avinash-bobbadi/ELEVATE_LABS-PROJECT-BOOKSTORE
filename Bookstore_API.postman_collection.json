@@ -1,0 +1,242 @@
+{
+    "info": {
+        "name": "Bookstore API",
+        "_postman_id": "c56789ab-1234-5678-9abc-123456789000",
+        "description": "Collection for testing Bookstore API (Authors & Books CRUD with H2 DB)",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Authors",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/authors",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "authors"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Author by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/authors/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "authors",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Author",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"George Orwell\",\n  \"nationality\": \"British\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/authors",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "authors"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Author",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Eric Arthur Blair\",\n  \"nationality\": \"British\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/authors/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "authors",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Author",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/authors/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "authors",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Books",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/books",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "books"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Book by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/books/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "books",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Book",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"title\": \"1984\",\n  \"genre\": \"Dystopian\",\n  \"price\": 9.99,\n  \"author\": { \"id\": 1 }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/books",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "books"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Book",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"title\": \"Animal Farm\",\n  \"genre\": \"Political Satire\",\n  \"price\": 7.99,\n  \"author\": { \"id\": 1 }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/books/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "books",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Book",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/books/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "books",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
